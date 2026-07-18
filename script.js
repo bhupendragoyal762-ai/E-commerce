@@ -7,12 +7,12 @@ const globalDatabase = [
     // Grocery
     { id: "rice", name: "Premium Basmati Rice", category: "Grocery", price: "₹899", img: "rice2.jpg", keywords: "rice basmati chawal grain" },
     { id: "salt", name: "Tata Salt", category: "Grocery", price: "₹25", img: "salt.jpg", keywords: "salt tata namak sodium" },
-    { id: "sugar", name: "Pure White Sugar", category: "Grocery", price: "₹45", img: "images_grocery.JPEG", keywords: "sugar chini sweet" },
-    { id: "tea", name: "Premium Assam Tea", category: "Grocery", price: "₹250", img: "images_grocery.JPEG", keywords: "tea chai assam leaf" },
-    { id: "atta", name: "Whole Wheat Atta", category: "Grocery", price: "₹350", img: "images_grocery.JPEG", keywords: "atta wheat flour flour" },
-    { id: "oil", name: "Mustard Oil 1L", category: "Grocery", price: "₹160", img: "images_grocery.JPEG", keywords: "oil mustard cooking sarso tel" },
-    { id: "masala", name: "Garam Masala", category: "Grocery", price: "₹80", img: "images_grocery.JPEG", keywords: "masala spices garam powder" },
-    { id: "biscuits", name: "Digestive Biscuits", category: "Grocery", price: "₹50", img: "images_grocery.JPEG", keywords: "biscuits cookies snack" },
+    { id: "sugar", name: "Pure White Sugar", category: "Grocery", price: "₹45", img: "images_grocery.jpeg", keywords: "sugar chini sweet" },
+    { id: "tea", name: "Premium Assam Tea", category: "Grocery", price: "₹250", img: "images_grocery.jpeg", keywords: "tea chai assam leaf" },
+    { id: "atta", name: "Whole Wheat Atta", category: "Grocery", price: "₹350", img: "images_grocery.jpeg", keywords: "atta wheat flour flour" },
+    { id: "oil", name: "Mustard Oil 1L", category: "Grocery", price: "₹160", img: "images_grocery.jpeg", keywords: "oil mustard cooking sarso tel" },
+    { id: "masala", name: "Garam Masala", category: "Grocery", price: "₹80", img: "images_grocery.jpeg", keywords: "masala spices garam powder" },
+    { id: "biscuits", name: "Digestive Biscuits", category: "Grocery", price: "₹50", img: "images_grocery.jpeg", keywords: "biscuits cookies snack" },
     { id: "bhujia", name: "Royal Aloo Bhujia Namkeen", category: "Grocery", price: "₹120", img: "aalu bhujiya.png", keywords: "namkeen bhujia snack aloo sev" },
     { id: "coldrink", name: "Refresh Cold Drink", category: "Grocery", price: "₹60", img: "coldrink.jpg", keywords: "cold drink coca cola pepsi sprite dew fanta slice maaza limca thumbs up" },
     { id: "soap", name: "Herbal Bath Soap", category: "Grocery", price: "₹40", img: "beauty.JPG", keywords: "soap bath wash" },
@@ -34,40 +34,40 @@ const globalDatabase = [
     { id: "acer", name: "Acer Predator Helios", category: "Laptops", price: "₹1,10,000", img: "acer.jpg", keywords: "acer predator laptop gaming pc computer" },
 
     // Women Fashion
-    { id: "saree", name: "Designer Silk Saree", category: "Women Fashion", price: "₹2,499", img: "images_fashion.JPEG", keywords: "saree sari silk women traditional biba w libas zara" },
-    { id: "kurti", name: "Cotton Printed Kurti", category: "Women Fashion", price: "₹799", img: "images_fashion.JPEG", keywords: "kurti kurta women ethnic top global desi" },
-    { id: "blouse", name: "Readymade Blouse", category: "Women Fashion", price: "₹599", img: "images_fashion.JPEG", keywords: "blouse women top" },
-    { id: "lehenga", name: "Bridal Lehenga", category: "Women Fashion", price: "₹5,999", img: "images_fashion.JPEG", keywords: "lehenga bridal women ethnic" },
-    { id: "handbag", name: "Leather Handbag", category: "Women Fashion", price: "₹1,299", img: "images_fashion.JPEG", keywords: "handbag bag women purse leather" },
-    { id: "heels", name: "Party Wear Heels", category: "Women Fashion", price: "₹999", img: "images_fashion.JPEG", keywords: "heels sandals shoes women" },
-    { id: "jewellery", name: "Gold Plated Jewellery Set", category: "Women Fashion", price: "₹1,499", img: "images_fashion.JPEG", keywords: "jewellery necklace earrings ring women" },
-    { id: "makeup", name: "Complete Makeup Kit", category: "Women Fashion", price: "₹1,999", img: "beauty.JPG", keywords: "makeup cosmetics beauty kit lipstick" },
+    { id: "saree", name: "Designer Silk Saree", category: "Women Fashion", price: "₹2,499", img: "images_fashion.jpeg", keywords: "saree sari silk women traditional biba w libas zara" },
+    { id: "kurti", name: "Cotton Printed Kurti", category: "Women Fashion", price: "₹799", img: "images_fashion.jpeg", keywords: "kurti kurta women ethnic top global desi" },
+    { id: "blouse", name: "Readymade Blouse", category: "Women Fashion", price: "₹599", img: "images_fashion.jpeg", keywords: "blouse women top" },
+    { id: "lehenga", name: "Bridal Lehenga", category: "Women Fashion", price: "₹5,999", img: "images_fashion.jpeg", keywords: "lehenga bridal women ethnic" },
+    { id: "handbag", name: "Leather Handbag", category: "Women Fashion", price: "₹1,299", img: "images_fashion.jpeg", keywords: "handbag bag women purse leather" },
+    { id: "heels", name: "Party Wear Heels", category: "Women Fashion", price: "₹999", img: "images_fashion.jpeg", keywords: "heels sandals shoes women" },
+    { id: "jewellery", name: "Gold Plated Jewellery Set", category: "Women Fashion", price: "₹1,499", img: "images_fashion.jpeg", keywords: "jewellery necklace earrings ring women" },
+    { id: "makeup", name: "Complete Makeup Kit", category: "Women Fashion", price: "₹1,999", img: "beauty.jpg", keywords: "makeup cosmetics beauty kit lipstick" },
 
     // Men Fashion
-    { id: "shirt", name: "Men's Classic Shirt", category: "Men Fashion", price: "₹699", img: "shirt.JPG", keywords: "shirt men formal casual peter england louis philippe" },
-    { id: "tshirt", name: "Polo T-Shirt", category: "Men Fashion", price: "₹499", img: "images_fashion.JPEG", keywords: "tshirt polo tee men casual levi's nike" },
-    { id: "jeans", name: "Slim Fit Jeans", category: "Men Fashion", price: "₹1,299", img: "images_fashion.JPEG", keywords: "jeans denim pants men levi's" },
-    { id: "jacket", name: "Winter Jacket", category: "Men Fashion", price: "₹1,999", img: "images_fashion.JPEG", keywords: "jacket winter coat men" },
-    { id: "menshoes", name: "Sports Running Shoes", category: "Men Fashion", price: "₹1,599", img: "shoes2.JPG", keywords: "shoes running sports men sneakers nike adidas" },
-    { id: "wallet", name: "Genuine Leather Wallet", category: "Men Fashion", price: "₹499", img: "images_fashion.JPEG", keywords: "wallet purse men leather" },
-    { id: "belt", name: "Classic Leather Belt", category: "Men Fashion", price: "₹399", img: "images_fashion.JPEG", keywords: "belt men leather" },
+    { id: "shirt", name: "Men's Classic Shirt", category: "Men Fashion", price: "₹699", img: "shirt.jpg", keywords: "shirt men formal casual peter england louis philippe" },
+    { id: "tshirt", name: "Polo T-Shirt", category: "Men Fashion", price: "₹499", img: "images_fashion.jpg", keywords: "tshirt polo tee men casual levi's nike" },
+    { id: "jeans", name: "Slim Fit Jeans", category: "Men Fashion", price: "₹1,299", img: "images_fashion.jpg", keywords: "jeans denim pants men levi's" },
+    { id: "jacket", name: "Winter Jacket", category: "Men Fashion", price: "₹1,999", img: "images_fashion.jpg", keywords: "jacket winter coat men" },
+    { id: "menshoes", name: "Sports Running Shoes", category: "Men Fashion", price: "₹1,599", img: "shoes2.jpg", keywords: "shoes running sports men sneakers nike adidas" },
+    { id: "wallet", name: "Genuine Leather Wallet", category: "Men Fashion", price: "₹499", img: "images_fashion.jpeg", keywords: "wallet purse men leather" },
+    { id: "belt", name: "Classic Leather Belt", category: "Men Fashion", price: "₹399", img: "images_fashion.jpeg", keywords: "belt men leather" },
 
     // Beauty
-    { id: "facewash", name: "Skin Glow Face Wash", category: "Beauty", price: "₹135", img: "facewash.JPG", keywords: "face wash facewash skin glow beauty" },
+    { id: "facewash", name: "Skin Glow Face Wash", category: "Beauty", price: "₹135", img: "facewash.jpg", keywords: "face wash facewash skin glow beauty" },
     { id: "cream", name: "Nivea Soft Cream", category: "Beauty", price: "₹199", img: "cream.jpg", keywords: "cream face nivea soft skin beauty crm cre" },
     { id: "hairoil", name: "Vatika Hair Oil", category: "Beauty", price: "₹150", img: "oil.jpg", keywords: "hair oil vatika beauty" },
-    { id: "perfume", name: "Luxury Perfume", category: "Beauty", price: "₹899", img: "beauty.JPG", keywords: "perfume scent fragrance beauty" },
-    { id: "lipstick", name: "Matte Lipstick", category: "Beauty", price: "₹299", img: "beauty.JPG", keywords: "lipstick lips makeup beauty" },
-    { id: "bodylotion", name: "Moisturizing Body Lotion", category: "Beauty", price: "₹350", img: "beauty.JPG", keywords: "body lotion moisturizer beauty skin" },
-    { id: "faceserum", name: "Vitamin C Face Serum", category: "Beauty", price: "₹499", img: "beauty.JPG", keywords: "face serum vitamin c beauty skin" },
-    { id: "facemask", name: "Charcoal Face Mask", category: "Beauty", price: "₹199", img: "beauty.JPG", keywords: "face mask charcoal beauty skin" },
+    { id: "perfume", name: "Luxury Perfume", category: "Beauty", price: "₹899", img: "beauty.jpg", keywords: "perfume scent fragrance beauty" },
+    { id: "lipstick", name: "Matte Lipstick", category: "Beauty", price: "₹299", img: "beauty.jpg", keywords: "lipstick lips makeup beauty" },
+    { id: "bodylotion", name: "Moisturizing Body Lotion", category: "Beauty", price: "₹350", img: "beauty.jpg", keywords: "body lotion moisturizer beauty skin" },
+    { id: "faceserum", name: "Vitamin C Face Serum", category: "Beauty", price: "₹499", img: "beauty.jpg", keywords: "face serum vitamin c beauty skin" },
+    { id: "facemask", name: "Charcoal Face Mask", category: "Beauty", price: "₹199", img: "beauty.jpg", keywords: "face mask charcoal beauty skin" },
 
     // Electronics / Watches
     { id: "earbuds", name: "Wireless Earbuds Pro", category: "Electronics", price: "₹899", img: "earbuds.jpg", keywords: "earbuds wireless audio bluetooth sound" },
     { id: "powerbank", name: "20000mAh Power Bank", category: "Electronics", price: "₹999", img: "powerbank.jpg", keywords: "power bank charger battery portable" },
     { id: "watch", name: "Premium Smart Watch X9", category: "Watches", price: "₹1,499", img: "images_smartwatch.jpeg", keywords: "watch smart watch smartwatch clock" },
-    { id: "headphones", name: "Gaming Headphones", category: "Electronics", price: "₹1,799", img: "images_headphone.JPEG", keywords: "headphones gaming headset audio" },
-    { id: "tablet", name: "Android Tablet 10 inch", category: "Electronics", price: "₹14,999", img: "images_mobile.JPEG", keywords: "tablet android tab pad" }
+    { id: "headphones", name: "Gaming Headphones", category: "Electronics", price: "₹1,799", img: "images_headphone.jpeg", keywords: "headphones gaming headset audio" },
+    { id: "tablet", name: "Android Tablet 10 inch", category: "Electronics", price: "₹14,999", img: "images_mobile.jpeg", keywords: "tablet android tab pad" }
 ];
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
