@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - NovaKart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><h1>Nova<span>Kart</span></h1></div>
+        <a href="index.html" style="font-weight:600; color:var(--text-color);"><i class="fa-solid fa-arrow-left"></i> Back to Shopping</a>
+    </nav>
+
+    <main class="product-details-container">
+        
+        <!-- Left Side: Images & New Text Thumbnails -->
+        <div class="left-section">
+            <div class="product-image-gallery">
+                <div class="img-zoom-container" id="zoom-container">
+                    <img id="main-product-image" src="" alt="Product Image">
+                </div>
+                
+                <!-- Updated Thumbnails with Title & Description -->
+                <div class="thumbnail-images">
+                    <div class="thumb-card" onclick="changeImage(document.getElementById('thumb1').src)">
+                        <img id="thumb1" src="" alt="Front View">
+                        <h5>Front View</h5>
+                        <p>High quality front view showing complete product design and premium finish.</p>
+                    </div>
+                    <div class="thumb-card" onclick="changeImage(document.getElementById('thumb2').src)">
+                        <img id="thumb2" src="" alt="Side View">
+                        <h5>Side View</h5>
+                        <p>Detailed side angle highlighting build quality and product thickness.</p>
+                    </div>
+                    <div class="thumb-card" onclick="changeImage(document.getElementById('thumb3').src)">
+                        <img id="thumb3" src="" alt="Close-up View">
+                        <h5>Close-up View</h5>
+                        <p>Zoomed view showing material quality, texture and important details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Amazon Style Details -->
+        <div class="product-info">
+            <p class="breadcrumbs">Home > <span id="product-category">Category</span> > Details</p>
+            <h1 class="product-title" id="product-name">Loading...</h1>
+            <p class="brand">Brand: <strong>NovaKart Exclusive</strong></p>
+            <div class="rating-box">⭐⭐⭐⭐⭐ <span>(1,245 Ratings & 480 Reviews)</span></div>
+            
+            <div class="pricing-box">
+                <span id="product-price-current" class="current-price"></span> 
+                <span id="product-price-old" class="old-price"></span>
+                <span class="discount-badge">Save Extra Today!</span>
+            </div>
+            
+            <div class="delivery-info">
+                <p><i class="fa-solid fa-location-dot" style="color:var(--primary);"></i> Deliver to your location.</p>
+                <p><i class="fa-solid fa-truck" style="color:var(--success);"></i> Free Delivery by <b>Tomorrow, 9 PM</b></p>
+                <p class="stock-status"><i class="fa-solid fa-check-circle"></i> In Stock</p>
+            </div>
+
+            <div class="product-description">
+                <h4>About this item:</h4>
+                <p id="product-desc"></p>
+            </div>
+
+            <!-- Actions -->
+            <div class="action-section">
+                <div style="margin-bottom: 10px; font-weight: 500;">Quantity:</div>
+                <div class="quantity-selector">
+                    <button onclick="decreaseQuantity()">-</button>
+                    <input type="number" id="product-quantity" value="1" min="1" readonly>
+                    <button onclick="increaseQuantity()">+</button>
+                </div>
+                <div class="buttons-group">
+                    <button class="add-cart-btn" onclick="addToCart()"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                    <button class="buy-now-btn" onclick="buyNow()"><i class="fa-solid fa-bolt"></i> Buy Now</button>
+                    <button class="wishlist-btn" onclick="alert('Added to Wishlist')"><i class="fa-regular fa-heart"></i></button>
+                </div>
+            </div>
+
+            <!-- Payment & Security Icons -->
+            <div class="payment-section">
+                <h4>100% Secure Payments</h4>
+                <div class="payment-icons">
+                    <span><i class="fa-brands fa-google-pay" style="color:#4285F4;"></i> UPI/GPay</span>
+                    <span><i class="fa-solid fa-building-columns" style="color:#673AB7;"></i> PhonePe</span>
+                    <span><i class="fa-solid fa-credit-card" style="color:#111;"></i> Credit/Debit Card</span>
+                    <span><i class="fa-solid fa-money-bill-1-wave" style="color:#28a745;"></i> Cash On Delivery</span>
+                    <span><i class="fa-solid fa-percent" style="color:#ff9900;"></i> EMI Available</span>
+                </div>
+            </div>
+
+            <!-- Policies -->
+            <div class="policy-section">
+                <div><i class="fa-solid fa-rotate-left"></i><p>7 Days Replacement</p></div>
+                <div><i class="fa-solid fa-shield-halved"></i><p>Brand Warranty</p></div>
+                <div><i class="fa-solid fa-trophy"></i><p>Top Brand</p></div>
+                <div><i class="fa-solid fa-lock"></i><p>Secure Transaction</p></div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Customers Also Bought -->
+    <section class="related-products-section">
+        <h2>Customers Also Bought</h2>
+        <div class="product-grid" id="related-products-grid">
+            <!-- Loaded via JS -->
+        </div>
+    </section>
+
+    <footer><div class="copyright"><p>© 2026 NovaKart. All Rights Reserved.</p></div></footer>
+    <script src="product-details.js"></script>
+</body>
+</html>
