@@ -1,0 +1,438 @@
+/* ===========================
+   NOVAKART PURPLE PREMIUM CART
+   Modern, Animated & Responsive
+=========================== */
+
+:root {
+    --primary-color: #5e138a; /* Darker Purple */
+    --primary-gradient: linear-gradient(135deg, #6a1b9a, #8e24aa);
+    --primary-hover: #4a148c;
+    --success-color: #28a745;
+    --success-hover: #1f8d39;
+    --danger-color: #dc3545;
+    --danger-hover: #c82333;
+    --bg-light: #f4f6f9;
+    --text-dark: #2c3e50;
+    --text-muted: #7f8c8d;
+    --white: #ffffff;
+    --shadow: 0 10px 25px rgba(0,0,0,0.08);
+    --hover-shadow: 0 15px 35px rgba(106, 27, 154, 0.15);
+    /* Bouncy smooth transition */
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    --ease-transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--bg-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--text-dark);
+}
+
+/* ===========================
+   Header - Modern Gradient 
+=========================== */
+header {
+    background: var(--primary-gradient);
+    color: var(--white);
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(106, 27, 154, 0.3);
+}
+
+.logo h1 {
+    color: var(--white);
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.back {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: var(--ease-transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.15);
+    padding: 8px 18px;
+    border-radius: 20px;
+}
+
+.back:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateX(-5px); /* Slide effect */
+}
+
+/* ===========================
+   Cart Section Layout 
+=========================== */
+.cart-section {
+    padding: 50px 6%;
+    flex: 1;
+}
+
+.cart-section h2 {
+    margin-bottom: 35px;
+    font-size: 32px;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+}
+
+.cart-section h2 i {
+    color: var(--primary-color);
+}
+
+.cart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* ===========================
+   Product Card Animations 
+=========================== */
+.cart-item {
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    gap: 25px;
+    transition: var(--ease-transition);
+    border-left: 5px solid transparent;
+    position: relative;
+}
+
+.cart-item:hover {
+    transform: translateY(-6px); /* Card lifts up */
+    box-shadow: var(--hover-shadow);
+    border-left: 5px solid var(--primary-color);
+}
+
+.cart-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    transition: var(--transition);
+}
+
+.cart-item:hover img {
+    transform: scale(1.08); /* Image zoom on hover */
+}
+
+.info {
+    flex: 1;
+}
+
+.info h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.info p {
+    font-size: 18px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Quantity Controls */
+.qty-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.qty-btn {
+    width: 38px;
+    height: 38px;
+    border: none;
+    background: #f0f0f0;
+    color: var(--text-dark);
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qty-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: scale(1.15); /* Pop effect */
+}
+
+.remove-btn {
+    background: rgba(220, 53, 69, 0.1);
+    color: var(--danger-color);
+    border: 1px solid rgba(220, 53, 69, 0.2);
+    padding: 10px 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--ease-transition);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.remove-btn:hover {
+    background: var(--danger-color);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(220, 53, 69, 0.3);
+}
+
+/* ===========================
+   Summary Box 
+=========================== */
+.summary {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 100px;
+    border-top: 5px solid var(--primary-color);
+    transition: var(--ease-transition);
+}
+
+.summary:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+.summary h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.summary hr {
+    border: none;
+    border-top: 2px dashed #ddd;
+    margin-bottom: 20px;
+}
+
+.summary-details p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-muted);
+}
+
+.summary-details p strong {
+    color: var(--text-dark);
+    font-size: 20px;
+}
+
+#totalPrice strong {
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 18px;
+    background: var(--primary-gradient);
+    border: none;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 12px;
+    margin-top: 15px;
+    transition: var(--ease-transition);
+    box-shadow: 0 6px 15px rgba(106, 27, 154, 0.25);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(106, 27, 154, 0.4);
+}
+
+/* Empty Cart State */
+.empty {
+    text-align: center;
+    padding: 50px 20px;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    color: var(--text-muted);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* ===========================
+   Footer - Left Aligned & Animated
+=========================== */
+footer {
+    background: #111;
+    color: #ddd;
+    padding: 50px 6%;
+    margin-top: auto;
+    border-top: 4px solid var(--primary-color);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start; /* Ensures everything is perfectly left-aligned */
+    gap: 40px;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row; /* Desktop view sets them side-by-side */
+    }
+}
+
+.contact-details h4, .social-links h4 {
+    color: var(--white);
+    font-size: 22px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Small underline animation on titles */
+.contact-details h4::after, .social-links h4::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background: var(--primary-color);
+    bottom: -8px;
+    left: 0;
+    transition: var(--ease-transition);
+    border-radius: 5px;
+}
+
+.contact-details:hover h4::after, .social-links:hover h4::after {
+    width: 100%;
+}
+
+.contact-details p {
+    margin-bottom: 12px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: var(--ease-transition);
+}
+
+.contact-details p i {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.contact-details p:hover {
+    color: var(--white);
+    transform: translateX(8px); /* Text slightly moves right on hover */
+}
+
+/* ===========================
+   Social Icons - Special Animations
+=========================== */
+.social-links {
+    text-align: left;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background: #222;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 22px;
+    text-decoration: none;
+    margin-right: 12px;
+    margin-top: 10px;
+    transition: var(--transition); /* Using the bouncy cubic-bezier */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Base Hover Effect for all icons */
+.social-links a:hover {
+    transform: translateY(-10px) scale(1.15) rotate(8deg); 
+}
+
+/* Facebook Color Animation */
+.social-links a:hover:has(.fa-facebook) {
+    background: #1877F2;
+    box-shadow: 0 10px 20px rgba(24, 119, 242, 0.5);
+}
+
+/* Instagram Gradient Animation */
+.social-links a:hover:has(.fa-instagram) {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    box-shadow: 0 10px 20px rgba(220, 39, 67, 0.5);
+}
+
+/* Twitter/X Color Animation */
+.social-links a:hover:has(.fa-twitter) {
+    background: #1DA1F2;
+    box-shadow: 0 10px 20px rgba(29, 161, 242, 0.5);
+}
+
+/* ===========================
+   Responsive View
+=========================== */
+@media (max-width: 900px) {
+    .cart-container {
+        grid-template-columns: 1fr;
+    }
+    .summary {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .qty-box {
+        justify-content: center;
+    }
+    .cart-item img {
+        width: 100%;
+        height: 180px;
+    }
+}

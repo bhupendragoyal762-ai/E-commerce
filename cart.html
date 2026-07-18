@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaKart - Shopping Cart</title>
+    <!-- यहाँ मैंने लिंक को ठीक कर दिया है (css/ हटा दिया है) -->
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>NovaKart</h1>
+        </div>
+        <a href="index.html" class="back">
+            <i class="fa-solid fa-arrow-left"></i> Continue Shopping
+        </a>
+    </header>
+
+    <main class="cart-section">
+        <h2><i class="fa-solid fa-cart-shopping"></i> My Shopping Cart</h2>
+        
+        <div class="cart-container">
+            <div id="cartItems" class="cart-items-wrapper">
+                <!-- Cart items JavaScript के द्वारा यहाँ आएँगे -->
+            </div>
+
+            <aside class="summary">
+                <h3>Order Summary</h3>
+                <hr>
+                <div class="summary-details">
+                    <p id="totalItems">Items: <strong>0</strong></p>
+                    <p id="totalPrice">Total: <strong>₹0</strong></p>
+                </div>
+                <button id="checkoutBtn" class="btn-primary">
+                    Proceed To Checkout <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-details">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-envelope"></i> support@novakart.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            </div>
+            <div class="social-links">
+                <h4>Follow Us </h4>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- यहाँ मैंने लिंक को ठीक कर दिया है (js/ हटा दिया है) -->
+    <script src="cart.js"></script>
+</body>
+</html>
