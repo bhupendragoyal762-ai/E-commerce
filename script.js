@@ -199,7 +199,7 @@ document.getElementById("subscribeBtn")?.addEventListener("click", () => {
 document.getElementById("wishlistBtn")?.addEventListener("click", () => { showToast("Added to Wishlist"); });
 
 // Slider
-const heroImages = ["banner1.JPG", "banner2.JPG", "banner3.JPG", "banner4.JPG"];
+const heroImages = ["banner1.jpg", "banner2.jpg", "banner3.jpg", "banner4.jpg"];
 const heroImage = document.getElementById("heroImage");
 let currentBanner = 0;
 if(heroImage) {
