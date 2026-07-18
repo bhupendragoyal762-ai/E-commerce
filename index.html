@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaKart - Shop More Save More</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="left-top">
+            <span><i class="fa-solid fa-phone"></i> +91 9509432692</span>
+            <span><i class="fa-solid fa-envelope"></i> bhupendraprajapat387@gmail.com</span>
+        </div>
+        <div class="right-top">
+            <span><i class="fa-solid fa-truck"></i> Free Delivery Above ₹499</span>
+        </div>
+    </div>
+
+    <nav>
+        <div class="logo">
+            <h1>Nova<span>Kart</span></h1>
+            <p>SHOP MORE SAVE MORE</p>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search by name, category, or keyword..." id="searchInput">
+            <button id="searchBtn" onclick="performGlobalSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="nav-icons">
+            <div id="wishlistBtn">
+                <i class="fa-regular fa-heart"></i>
+                <p>Wishlist</p>
+            </div>
+            <a href="cart.html" class="cart-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p class="cart-count">Cart (0)</p>
+            </a>
+            <div>
+                <img src="profilefirst.JPG" alt="Profile" onerror="this.src='https://via.placeholder.com/50'">
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-left">
+            <h1>Mega Sale <br>UP TO <span>70% OFF</span></h1>
+            <p>Electronics, Grocery, Fashion, Beauty & More</p>
+            <button id="heroShopBtn">Shop Now</button>
+        </div>
+        <div class="hero-right">
+            <img src="banner1.JPG" id="heroImage" alt="Hero Banner">
+        </div>
+    </section>
+
+    <section class="categories" id="categoriesSection">
+        <h2>Shop By Category</h2>
+        <div class="category-box">
+            <div class="category" data-category="Mobiles"><img src="images_mobile.JPEG" alt="Mobiles"><p>Mobiles</p></div>
+            <div class="category" data-category="Laptops"><img src="images_laptop.JPEG" alt="Laptops"><p>Laptops</p></div>
+            <div class="category" data-category="Watches"><img src="images_watch.JPEG" alt="Watches"><p>Watches</p></div>
+            <div class="category" data-category="Beauty"><img src="beauty.JPG" alt="Beauty"><p>Beauty</p></div>
+            <div class="category" data-category="Grocery"><img src="images_grocery.JPEG" alt="Grocery"><p>Grocery</p></div>
+            <div class="category" data-category="Fashion"><img src="images_fashion.JPEG" alt="Fashion"><p>Fashion</p></div>
+            <div class="category" data-category="Home"><img src="images_home.JPEG" alt="Home"><p>Home</p></div>
+            <div class="category" data-category="Shoes"><img src="images_shoes.JPEG" alt="Shoes"><p>Shoes</p></div>
+            <div class="category" data-category="Women Fashion"><i class="fa-solid fa-person-dress" style="font-size: 40px; color: var(--primary); margin-bottom: 15px; display: block;"></i><p>Women Fashion</p></div>
+            <div class="category" data-category="Men Fashion"><i class="fa-solid fa-shirt" style="font-size: 40px; color: var(--primary); margin-bottom: 15px; display: block;"></i><p>Men Fashion</p></div>
+        </div>
+    </section>
+
+    <!-- Dynamic Search & Category Results Section (Hidden by Default) -->
+    <section class="products" id="dynamicResultsSection" style="display: none;">
+        <h2 id="dynamicResultsTitle">Search Results</h2>
+        <div class="product-grid" id="dynamicResultsGrid">
+            <!-- JS will load products here -->
+        </div>
+    </section>
+
+    <!-- Original Sections -->
+    <div id="defaultFrontPage">
+        <!-- 4 Products -->
+        <section class="products" id="shopSection">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="product-details.html?item=facewash"><img src="facewash.JPG" loading="lazy" alt="Face Wash"></a>
+                    <div class="product-info">
+                        <a href="product-details.html?item=facewash"><h3>Skin Glow Face Wash</h3></a>
+                        <div class="rating">⭐⭐⭐⭐☆</div>
+                        <h4>₹135</h4>
+                    </div>
+                    <div class="product-buttons">
+                        <button class="cart-btn" onclick="window.location.href='product-details.html?item=facewash'">View Details</button>
+                        <button class="buy-btn" onclick="directBuy('Skin Glow Face Wash', '₹135', 'facewash.JPG')">Buy Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="product-details.html?item=bhujia"><img src="aalu bhujiya.png" loading="lazy" alt="Namkeen"></a>
+                    <div class="product-info">
+                        <a href="product-details.html?item=bhujia"><h3>Royal Aloo Bhujia Namkeen</h3></a>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <h4>₹120</h4>
+                    </div>
+                    <div class="product-buttons">
+                        <button class="cart-btn" onclick="window.location.href='product-details.html?item=bhujia'">View Details</button>
+                        <button class="buy-btn" onclick="directBuy('Royal Aloo Bhujia Namkeen', '₹120', 'aalu bhujiya.png')">Buy Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="product-details.html?item=earbuds"><img src="earbuds.png" loading="lazy" alt="Earbuds"></a>
+                    <div class="product-info">
+                        <a href="product-details.html?item=earbuds"><h3>Wireless Earbuds Pro</h3></a>
+                        <div class="rating">⭐⭐⭐⭐☆</div>
+                        <h4>₹899</h4>
+                    </div>
+                    <div class="product-buttons">
+                        <button class="cart-btn" onclick="window.location.href='product-details.html?item=earbuds'">View Details</button>
+                        <button class="buy-btn" onclick="directBuy('Wireless Earbuds Pro', '₹899', 'earbuds.jpg')">Buy Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="product-details.html?item=powerbank"><img src="powerbank.jpg" loading="lazy" alt="Power Bank"></a>
+                    <div class="product-info">
+                        <a href="product-details.html?item=powerbank"><h3>20000mAh Power Bank</h3></a>
+                        <div class="rating">⭐⭐⭐⭐☆</div>
+                        <h4>₹999</h4>
+                    </div>
+                    <div class="product-buttons">
+                        <button class="cart-btn" onclick="window.location.href='product-details.html?item=powerbank'">View Details</button>
+                        <button class="buy-btn" onclick="directBuy('20000mAh Power Bank', '₹999', 'powerbank.jpg')">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flash Sale -->
+        <section class="flash-sale">
+            <h2>⚡ Flash Sale</h2>
+            <h3 id="flashTimer" class="flash-timer"></h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="product-details.html?item=watch"><img src="images_smartwatch.jpeg" loading="lazy" alt="Smart Watch"></a>
+                    <span class="discount">-50%</span>
+                    <div class="product-info">
+                        <a href="product-details.html?item=watch"><h3>Premium Smart Watch X9</h3></a>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <h4>₹1,499 <del>₹2,999</del></h4>
+                    </div>
+                    <div class="product-buttons">
+                        <button class="cart-btn" onclick="window.location.href='product-details.html?item=watch'">View Details</button>
+                        <button class="buy-btn" onclick="directBuy('Premium Smart Watch X9', '₹1499', 'images_smartwatch.jpeg')">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Selling -->
+        <section class="products">
+            <h2>Best Selling</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="product-details.html?item=iphone"><img src="apple17.jpg" loading="lazy" alt="iPhone 17 Pro"></a>
+                    <div class="product-info">
+                        <a href="product-details.html?item=iphone"><h3>iPhone 17 Pro</h3></a>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <h4>₹1,29,999</h4>
+                    </div>
+                    <div class="product-buttons">
+                        <button class="cart-btn" onclick="window.location.href='product-details.html?item=iphone'">View Details</button>
+                        <button class="buy-btn" onclick="directBuy('iPhone 17 Pro', '₹129999', 'applethumb.jpg')">Buy Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="product-details.html?item=hp"><img src="hp.jpg" loading="lazy" alt="HP Laptop"></a>
+                    <div class="product-info">
+                        <a href="product-details.html?item=hp"><h3>HP Professional Laptop</h3></a>
+                        <div class="rating">⭐⭐⭐⭐☆</div>
+                        <h4>₹45,000</h4>
+                    </div>
+                    <div class="product-buttons">
+                        <button class="cart-btn" onclick="window.location.href='product-details.html?item=hp'">View Details</button>
+                        <button class="buy-btn" onclick="directBuy('HP Professional Laptop', '₹45000', 'hp.jpg')">Buy Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="product-details.html?item=coldrink"><img src="coldrink.jpg" loading="lazy" alt="Cold Drink"></a>
+                    <div class="product-info">
+                        <a href="product-details.html?item=coldrink"><h3>Refresh Cold Drink</h3></a>
+                        <div class="rating">⭐⭐⭐⭐☆</div>
+                        <h4>₹60</h4>
+                    </div>
+                    <div class="product-buttons">
+                        <button class="cart-btn" onclick="window.location.href='product-details.html?item=coldrink'">View Details</button>
+                        <button class="buy-btn" onclick="directBuy('Refresh Cold Drink', '₹60', 'coldrink.jpg')">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="why-shop">
+        <h2>Why Shop With NovaKart?</h2>
+        <div class="why-container">
+            <div class="why-box"><i class="fa-solid fa-truck-fast"></i><h3>Fast Delivery</h3><p>Delivery all over India.</p></div>
+            <div class="why-box"><i class="fa-solid fa-credit-card"></i><h3>Secure Payment</h3><p>100% Safe Checkout.</p></div>
+            <div class="why-box"><i class="fa-solid fa-arrow-rotate-left"></i><h3>Easy Return</h3><p>7 Days Return Policy.</p></div>
+            <div class="why-box"><i class="fa-solid fa-headset"></i><h3>24×7 Support</h3><p>Customer Support Anytime.</p></div>
+        </div>
+    </section>
+
+    <section class="owner">
+        <div class="owner-card">
+            <img src="profile.JPEG" alt="Founder" onerror="this.src='https://via.placeholder.com/150'">
+            <h2>Bhupendra Prajapat</h2>
+            <p>Founder & CEO</p>
+            <p><i class="fa-solid fa-phone"></i> +91 9509432692</p>
+            <p><i class="fa-solid fa-envelope"></i> bhupendraprajapat387@gmail.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Rajasthan, India</p>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Subscribe For Latest Offers</h2>
+            <p>Get updates about new arrivals, discounts and exclusive deals.</p>
+            <div class="subscribe-box">
+                <input type="email" placeholder="Enter Your Email" id="newsletterEmail">
+                <button id="subscribeBtn">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="brands">
+        <h2>Top Brands</h2>
+        <div class="brand-container">
+            <!-- Electronics -->
+            <div class="brand-box">Apple</div><div class="brand-box">Samsung</div><div class="brand-box">Sony</div>
+            <!-- Men Fashion -->
+            <div class="brand-box">Louis Philippe</div><div class="brand-box">Peter England</div><div class="brand-box">Allen Solly</div><div class="brand-box">Levi's</div><div class="brand-box">Nike</div><div class="brand-box">Adidas</div>
+            <!-- Women Fashion -->
+            <div class="brand-box">Biba</div><div class="brand-box">Libas</div><div class="brand-box">Zara</div><div class="brand-box">H&M</div><div class="brand-box">Global Desi</div>
+            <div class="brand-box" style="background:var(--primary); color:#fff;">NovaKart</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-box">
+                <h2>NovaKart</h2>
+                <p>India's Trusted Online Shopping Store. Quality Products at Best Prices.</p>
+            </div>
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul><li><a href="#">Home</a></li><li><a href="#shopSection">Products</a></li><li><a href="#categoriesSection">Categories</a></li><li><a href="#">Offers</a></li><li><a href="#">Contact</a></li></ul>
+            </div>
+            <div class="footer-box">
+                <h3>Customer Care</h3>
+                <ul><li>Help Center</li><li>Track Order</li><li>Returns</li><li>Refund Policy</li><li>Privacy Policy</li></ul>
+            </div>
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-phone"></i> +91 9509432692</p>
+                <p><i class="fa-solid fa-envelope"></i> bhupendraprajapat387@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Rajasthan, India</p>
+                <div class="social-icons-animated">
+                    <a href="https://www.facebook.com/share/194zRAakcD/" class="fb" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/bhupi_cretive?igsh=MWZlcTc2bGxjMWN4Yg==" class="ig" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://youtube.com/@mind_of_bhupendra?si=YoYutXizhpYsiOV_" class="yt" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://wa.me/919509432692?text=Hello%20Bhupendra,%20I%20am%20interested%20in%20your%20products." class="wa" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <p>© 2026 NovaKart. All Rights Reserved. Designed By Bhupendra Prajapat</p>
+    </div>
+
+    <button id="topBtn"><i class="fa-solid fa-arrow-up"></i></button>
+    <button id="darkBtn">🌙</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
